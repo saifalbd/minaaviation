@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import './_trix.css';
+
+
+.trix-content{
+    width: 100%;
+}
+
+.card{
+    @apply block max-w-sm p-1 ring-4 ring-fuchsia-300 bg-white border border-gray-200 rounded-lg shadow
+     hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700
+     relative w-fit md:w-auto;
+
+     margin-top: 100px;
+     margin-bottom: 50px;
+
+     transition: 2s all;
+     .price-box{
+        transition: 2s all;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%,-50%);
+        height: 100px;
+        width: 300px;
+        //background-color: #0268b1c2;
+        @apply border-2 border-fuchsia-500 rounded-full text-lime-50 text-lg  flex justify-center items-center flex-col bg-blue-700;
+        &:hover{
+            background-color: #0267B1;
+            @apply text-lime-50;
+        }
+     }
+
+     &:hover{
+        .price-box{
+            transform: translate(-50%,-80%);
+        }
+     }
+}
